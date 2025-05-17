@@ -5,7 +5,7 @@ with open('text.txt', 'r') as file:
     text = file.read()
 
 # Поиск email-адресов
-emails = re.findall(r'\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b', text)
+emails = re.findall(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}', text)
 
 # Запись email-адресов в файл emails.txt
 with open('emails.txt', 'w') as file:
@@ -21,7 +21,7 @@ with open('phones.txt', 'w') as file:
         file.write(phone + '\n')
 
 # Поиск слов с заглавной буквы
-capital_words = re.findall(r'\b[A-Z][a-z]*\b', text)
+capital_words = re.findall(r'[A-Z][a-z]', text)
 
 # Запись слов с заглавной буквы в файл capital_words.txt
 with open('capital_words.txt', 'w') as file:
